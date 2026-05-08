@@ -4,12 +4,13 @@
   /* CUstom Colors */
   --color-dark-navy: #0d1b3e;
   --color-mid-navy: #162650;
-  --color-navy: #1c3d80;
+  --color-footer: rgba(0, 0, 0, 0.3);
   --color-gray: #a8b4c8;
+  --color-gold: #f5c842;
   --color-ice: #f8faff;
   --color-ice-mid: #e8f0fe;
-  --color-crimson: #d42b42;
-  --color-crimson-light: #f04060;
+  --color-crimson: #e8132a;
+  --color-crimson-light: #ff3a52;
   --color-border-blue: #d0ddf8;
   --color-text-main: #1c3d80;
   --color-text-soft: #4a6090;
@@ -23,6 +24,5 @@
 /* Base Styles */
 body {
   font-family: var(--font-body);
-  background-color: var(--color-ice);
-  color: var(--color-navy);
+  background-color: var(--color-dark-navy);
 }

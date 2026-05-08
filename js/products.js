@@ -12,7 +12,7 @@ const products = [
     ratings: [],
     ratedBy: [],
     image:
-      "https://plus.unsplash.com/premium_photo-1695868328502-81c9e0468b74?w=640&q=80&fit=crop",
+      "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=640&q=80&fit=crop",
   },
   {
     id: 2,
