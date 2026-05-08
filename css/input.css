@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* CUstom Colors */
+  /* Custom Colors */
   --color-dark-navy: #0d1b3e;
   --color-mid-navy: #162650;
   --color-footer: rgba(0, 0, 0, 0.3);
