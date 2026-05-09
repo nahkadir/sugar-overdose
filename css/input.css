@@ -26,3 +26,15 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-dark-navy);
 }
+
+.nav-selections {
+  @apply hover:cursor-pointer hover:bg-crimson/20 px-4 py-2 rounded-md;
+}
+
+.pill {
+  @apply text-sm font-bold border border-gray text-gray rounded-full px-5 py-2 hover:cursor-pointer hover:text-white hover:border-crimson hover:bg-crimson/10 transition-all;
+}
+
+.tab-active {
+  @apply bg-crimson text-white border-crimson font-bold;
+}
