@@ -36,5 +36,5 @@ body {
 }
 
 .tab-active {
-  @apply bg-crimson text-white border-crimson font-bold;
+  @apply bg-crimson text-white border-crimson font-bold hover:bg-crimson hover:text-white hover:border-crimson;
 }
