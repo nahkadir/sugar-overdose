@@ -1,30 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom Colors */
-  --color-dark-navy: #0d1b3e;
-  --color-mid-navy: #162650;
-  --color-footer: rgba(0, 0, 0, 0.3);
-  --color-gray: #a8b4c8;
-  --color-gold: #f5c842;
-  --color-ice: #f8faff;
-  --color-ice-mid: #e8f0fe;
-  --color-crimson: #e8132a;
-  --color-crimson-light: #ff3a52;
-  --color-border-blue: #d0ddf8;
-  --color-text-main: #1c3d80;
-  --color-text-soft: #4a6090;
-  --color-text-muted: #7a90b8;
+  --color-cream: #fdf6ec;
+  --color-cream-mid: #f5e6d0;
+  --color-choco: #3b1f0e;
+  --color-footer: rgba(212, 184, 160, 0.3);
+  --color-brown: #7c5c3e;
+  --color-gold: #f9a825;
+  --color-crimson: #e8274b;
+  --color-crimson-light: #ff4d6a;
+  --color-border: #edd9c0;
+  --color-text-main: #3b1f0e;
+  --color-text-soft: #7c5c3e;
+  --color-text-muted: #a08060;
 
-  /* Custom Fonts */
   --font-display: "Playfair Display", serif;
   --font-body: "DM Sans", sans-serif;
 }
 
-/* Base Styles */
 body {
   font-family: var(--font-body);
-  background-color: var(--color-dark-navy);
 }
 
 .nav-selections {
@@ -32,7 +27,7 @@ body {
 }
 
 .pill {
-  @apply text-sm font-bold border border-gray text-gray rounded-full px-5 py-2 hover:cursor-pointer hover:text-white hover:border-crimson hover:bg-crimson/10 transition-all;
+  @apply text-sm font-bold border border-brown text-brown rounded-full px-5 py-2 hover:cursor-pointer hover:text-choco hover:border-crimson hover:bg-crimson/10 transition-all;
 }
 
 .tab-active {

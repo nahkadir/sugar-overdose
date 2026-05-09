@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugar Overdose</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="bg-choco flex justify-center min-h-screen py-16 px-4">
+    <nav
+      class="bg-choco flex justify-between items-center p-4 border-b border-b-crimson fixed top-0 left-0 right-0 z-50"
+    >
+      <div
+        class="font-display font-extrabold text-md text-cream sm:text-lg md:text-xl lg:text-xl"
+      >
+        Sugar <span class="text-crimson">Overdose</span>
+      </div>
+      <div class="flex gap-4 items-center">
+        <button
+          class="text-xs sm:text-sm font-bold border border-cream/30 text-cream rounded-md px-5 py-2 hover:cursor-pointer hover:border-crimson hover:bg-crimson/10 hover:-translate-y-0.5 transition-all"
+        >
+          Login
+        </button>
+      </div>
+    </nav>
+
+    <div
+      class="bg-cream max-w-md w-full mx-auto px-8 py-10 rounded-2xl flex flex-col gap-6 mt-15 border border-crimson"
+    >
+      <div class="font-display font-extrabold text-3xl text-text-main">
+        Sugar <span class="text-crimson">Overdose</span>
+      </div>
+      <div>
+        <div class="font-display font-extrabold text-4xl text-text-main">
+          Create Account
+        </div>
+        <div class="text-sm text-brown">
+          Join us and start your sweet journey
+        </div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <div class="text-sm text-brown font-bold">FULL NAME</div>
+        <div>
+          <input
+            id="signupName"
+            class="bg-cream-mid text-brown py-2 px-4 rounded-lg w-full border border-border focus:outline-none focus:border-crimson"
+            placeholder="Your full name"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <div class="text-sm text-brown font-bold">EMAIL ADDRESS</div>
+        <div>
+          <input
+            id="signupEmail"
+            class="bg-cream-mid text-brown py-2 px-4 rounded-lg w-full border border-border focus:outline-none focus:border-crimson"
+            placeholder="you@example.com"
+            type="email"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <div class="text-sm text-brown font-bold">PASSWORD</div>
+        <div>
+          <input
+            id="signupPassword"
+            class="bg-cream-mid text-brown py-2 px-4 rounded-lg w-full border border-border focus:outline-none focus:border-crimson"
+            placeholder="Min. 6 characters"
+            type="password"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <div class="text-sm text-brown font-bold">PHONE (OPTIONAL)</div>
+        <div>
+          <input
+            id="signupPhone"
+            class="bg-cream-mid text-brown py-2 px-4 rounded-lg w-full border border-border focus:outline-none focus:border-crimson"
+            placeholder="+92 300 0000000"
+            type="tel"
+          />
+        </div>
+      </div>
+
+      <button
+        id="signupBtn"
+        class="text-md font-bold bg-crimson text-white rounded-md px-5 py-3 hover:cursor-pointer hover:bg-crimson-light hover:-translate-y-0.5 transition-all"
+      >
+        Create Account
+      </button>
+      <div class="text-sm text-brown text-center">
+        Already have an account?
+        <a class="font-bold hover:underline text-crimson" href="login.html"
+          >Sign in</a
+        >
+      </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

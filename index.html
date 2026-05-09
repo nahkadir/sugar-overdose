@@ -12,19 +12,17 @@
     <link rel="stylesheet" href="./css/output.css" />
     <title>Sugar Overdose</title>
   </head>
-  <body>
-    <!-- ** Add Hamburger Menu at LG Breakpoint -->
-    <!-- NAVBAR -->
+  <body class="bg-cream">
     <nav
-      class="bg-dark-navy flex justify-between items-center p-4 border-b border-b-crimson fixed top-0 left-0 right-0 z-50"
+      class="bg-choco flex justify-between items-center p-4 border-b border-b-crimson fixed top-0 left-0 right-0 z-50"
     >
       <div
-        class="font-display font-extrabold text-md text-white sm:text-lg md:text-xl lg:text-xl"
+        class="font-display font-extrabold text-md text-cream sm:text-lg md:text-xl lg:text-xl"
       >
         Sugar <span class="text-crimson">Overdose</span>
       </div>
       <div
-        class="text-sm text-white hidden lg:flex lg:gap-4 xl:gap-7 items-center"
+        class="text-sm text-cream hidden lg:flex lg:gap-4 xl:gap-7 items-center"
       >
         <button class="nav-selections">All</button>
         <button class="nav-selections">Sundaes</button>
@@ -46,7 +44,7 @@
           />
         </svg>
         <button
-          class="text-xs sm:text-sm font-bold border border-gray text-white rounded-md px-5 py-2 hover:cursor-pointer hover:border-crimson hover:bg-crimson/10 hover:-translate-y-0.5 transition-all"
+          class="text-xs sm:text-sm font-bold border border-cream/30 text-cream rounded-md px-5 py-2 hover:cursor-pointer hover:border-crimson hover:bg-crimson/10 hover:-translate-y-0.5 transition-all"
         >
           Login
         </button>
@@ -59,9 +57,8 @@
     </nav>
 
     <main class="pt-15">
-      <!-- HERO -->
       <section
-        class="h-screen text-white flex flex-col gap-8 justify-center items-center text-center"
+        class="h-screen text-text-main flex flex-col gap-8 justify-center items-center text-center"
       >
         <div
           class="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold px-6"
@@ -70,7 +67,9 @@
           For Anything <br />
           But <span class="text-crimson">Great</span> Desserts
         </div>
-        <p class="text-md text-gray w-full max-w-lg px-6 sm:text-lg md:text-xl">
+        <p
+          class="text-md text-brown w-full max-w-lg px-6 sm:text-lg md:text-xl"
+        >
           Indulge in handcrafted sundaes, artisan cakes, specialty shakes and
           tasty cookies. Every bite, every sip — an experience.
         </p>
@@ -81,23 +80,21 @@
             Explore Menu
           </button>
           <button
-            class="text-md font-bold border border-gray text-white rounded-lg px-8 py-3 hover:cursor-pointer hover:border-crimson hover:bg-crimson/10 bg-gray/10 transition-all"
+            class="text-md font-bold border border-choco/40 text-text-main rounded-lg px-8 py-3 hover:cursor-pointer hover:border-crimson hover:bg-crimson/10 transition-all"
           >
             Join the Club
           </button>
         </div>
       </section>
 
-      <!-- MENU -->
       <section class="flex flex-col items-center text-center gap-4 px-6">
-        <!-- CATEGORY TABS -->
         <div
-          class="font-display text-white font-extrabold text-4xl lg:text-5xl"
+          class="font-display text-text-main font-extrabold text-4xl lg:text-5xl"
         >
           Sweet Selections
         </div>
         <p
-          class="text-md text-gray w-full max-w-lg px-6 sm:text-lg md:text-xl mb-4"
+          class="text-md text-brown w-full max-w-lg px-6 sm:text-lg md:text-xl mb-4"
         >
           Every item made to order, every flavour a memory waiting to happen
         </p>
@@ -110,25 +107,22 @@
         </div>
       </section>
 
-      <!-- Product Cards -->
       <section class="my-8 px-4">
         <div
           class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
           id="grid"
-        >
-          <!-- Cards rendered from app.js -->
-        </div>
+        ></div>
       </section>
     </main>
-    <!-- FOOTER -->
+
     <footer class="bg-footer py-10">
       <div
         class="max-w-4xl mx-auto flex flex-col items-center gap-2 text-center"
       >
-        <div class="font-display font-extrabold text-2xl text-white">
+        <div class="font-display font-extrabold text-2xl text-chocolate">
           Sugar <span class="text-crimson">Overdose</span>
         </div>
-        <div class="text-gray text-xs">
+        <div class="text-brown text-xs">
           &copy; 2026 Sugar Overdose. Made with<svg
             class="inline w-4 h-4 text-crimson-light mx-1 align-top"
             xmlns="http://www.w3.org/2000/svg"

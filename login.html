@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugar Overdose</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="bg-choco flex justify-center min-h-screen items-center px-4">
+    <nav
+      class="bg-choco flex justify-between items-center p-4 border-b border-b-crimson fixed top-0 left-0 right-0 z-50"
+    >
+      <div
+        class="font-display font-extrabold text-md text-cream sm:text-lg md:text-xl lg:text-xl"
+      >
+        Sugar <span class="text-crimson">Overdose</span>
+      </div>
+      <div class="flex gap-4 items-center">
+        <button
+          class="text-xs sm:text-sm font-bold bg-crimson text-white rounded-md px-5 py-2 hover:cursor-pointer hover:bg-crimson-light hover:-translate-y-0.5 transition-all"
+        >
+          Sign Up
+        </button>
+      </div>
+    </nav>
+
+    <div
+      class="bg-cream max-w-md w-full mx-auto px-8 py-10 rounded-2xl flex flex-col gap-6 mt-15 border border-crimson"
+    >
+      <div class="font-display font-extrabold text-3xl text-text-main">
+        Sugar <span class="text-crimson">Overdose</span>
+      </div>
+      <div>
+        <div class="font-display font-extrabold text-4xl text-text-main">
+          Welcome Back
+        </div>
+        <div class="text-sm text-brown">
+          Sign in to your account to continue
+        </div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <div class="text-sm text-brown font-bold">EMAIL ADDRESS</div>
+        <div>
+          <input
+            id="loginEmail"
+            class="bg-cream-mid text-brown py-2 px-4 rounded-lg w-full border border-border focus:outline-none focus:border-crimson"
+            placeholder="you@example.com"
+            type="email"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <div class="text-sm text-brown font-bold">PASSWORD</div>
+        <div>
+          <input
+            id="loginPassword"
+            class="bg-cream-mid text-brown py-2 px-4 rounded-lg w-full border border-border focus:outline-none focus:border-crimson"
+            placeholder="******"
+            type="password"
+          />
+        </div>
+      </div>
+
+      <button
+        id="loginBtn"
+        class="text-md font-bold bg-crimson text-white rounded-md px-5 py-3 hover:cursor-pointer hover:bg-crimson-light hover:-translate-y-0.5 transition-all"
+      >
+        Sign In
+      </button>
+      <div class="text-sm text-brown text-center">
+        Don't have an account?
+        <a class="font-bold hover:underline text-crimson" href="signup.html"
+          >Create one</a
+        >
+      </div>
+      <div
+        class="flex justify-center gap-0.5 text-sm items-center font-bold hover:underline text-crimson"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+          />
+        </svg>
+        <a href="index.html">Back to Menu</a>
+      </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

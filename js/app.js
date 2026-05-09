@@ -16,7 +16,7 @@ function renderProducts(filter = "all") {
     .map(function (product) {
       return `
     <div
-            class="rounded-2xl overflow-hidden border border-white/10 bg-mid-navy hover:border hover:border-crimson transition-transform duration-300 ease-in-out hover:-translate-y-1"
+            class="rounded-2xl overflow-hidden border border-black/20 bg-mid-navy hover:border hover:border-crimson transition-transform duration-300 ease-in-out hover:-translate-y-1"
           >
             <div class="relative">
               <img
@@ -43,7 +43,7 @@ function renderProducts(filter = "all") {
               </div>
             </div>
             <div class="p-8 flex flex-col gap-2">
-              <div class="font-display text-white font-bold text-lg">
+              <div class="font-display text-brown font-bold text-lg">
                 ${product.name}
               </div>
               <div class="text-sm text-gray leading-relaxed">
