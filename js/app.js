@@ -72,7 +72,7 @@ function renderProducts(filter = "all") {
                       />
                     </svg>
                   </button>
-                  <button
+                  <button onclick="addToCart(${product.id})"
                     class="p-2 rounded-md bg-crimson hover:bg-crimson-light transition-all"
                   >
                     <svg
@@ -119,22 +119,22 @@ tabs.forEach(function (tab) {
   });
 });
 
-currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
-
 function updateNav() {
+  currentUser = JSON.parse(localStorage.getItem(CURRENT_USER_KEY));
   let loginNav = document.getElementById("loginNav");
   let signupNav = document.getElementById("signupNav");
   let logoutNav = document.getElementById("logoutNav");
-  let cartNav = document.getElementById("cartNav");
   let navGreet = document.getElementById("greetingNav");
-
+  let cartNav = document.getElementById("cartNav");
   if (currentUser) {
     loginNav.classList.add("hidden");
     signupNav.classList.add("hidden");
     logoutNav.classList.remove("hidden");
-    cartNav.classList.remove("hidden");
     navGreet.classList.remove("hidden");
     navGreet.textContent = "Hello, " + currentUser.name;
+    if (!currentUser.isAdmin) {
+      cartNav.classList.remove("hidden");
+    }
   } else {
     loginNav.classList.remove("hidden");
     signupNav.classList.remove("hidden");

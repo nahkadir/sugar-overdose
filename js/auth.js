@@ -1,8 +1,5 @@
-const ADMIN_EMAIL = "admin@sugaroverdose.com";
-const ADMIN_PASSWORD = "admin123";
-
-let users = JSON.parse(localStorage.getItem("users")) || [];
-let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+let users = JSON.parse(localStorage.getItem(USERS_KEY)) || [];
+let currentUser = JSON.parse(localStorage.getItem(CURRENT_USER_KEY)) || null;
 
 function signup() {
   let signupName = document.getElementById("signupName");
@@ -49,9 +46,9 @@ function signup() {
   };
 
   users.push(newUser);
-  localStorage.setItem("users", JSON.stringify(users));
+  localStorage.setItem(USERS_KEY, JSON.stringify(users));
   currentUser = newUser;
-  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(currentUser));
 
   window.location.href = "index.html";
 }
@@ -75,6 +72,8 @@ function login() {
     loginEmail.value === ADMIN_EMAIL &&
     loginPassword.value === ADMIN_PASSWORD
   ) {
+    currentUser = { name: "Admin", email: loginEmail.value, isAdmin: true };
+    localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(currentUser));
     window.location.href = "admin.html";
     return;
   }
@@ -88,7 +87,7 @@ function login() {
   });
   if (existingUser) {
     currentUser = existingUser;
-    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(currentUser));
     window.location.href = "index.html";
   } else {
     errorMsg.textContent = "Invalid email or password.";
@@ -99,8 +98,7 @@ function login() {
 
 function logout() {
   currentUser = null;
-  localStorage.removeItem("currentUser");
-  updateNav();
+  localStorage.removeItem(CURRENT_USER_KEY);
   window.location.href = "index.html";
 }
 
