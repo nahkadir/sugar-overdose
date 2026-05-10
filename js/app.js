@@ -118,3 +118,30 @@ tabs.forEach(function (tab) {
     tab.classList.add("tab-active");
   });
 });
+
+currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+
+function updateNav() {
+  let loginNav = document.getElementById("loginNav");
+  let signupNav = document.getElementById("signupNav");
+  let logoutNav = document.getElementById("logoutNav");
+  let cartNav = document.getElementById("cartNav");
+  let navGreet = document.getElementById("greetingNav");
+
+  if (currentUser) {
+    loginNav.classList.add("hidden");
+    signupNav.classList.add("hidden");
+    logoutNav.classList.remove("hidden");
+    cartNav.classList.remove("hidden");
+    navGreet.classList.remove("hidden");
+    navGreet.textContent = "Hello, " + currentUser.name;
+  } else {
+    loginNav.classList.remove("hidden");
+    signupNav.classList.remove("hidden");
+    logoutNav.classList.add("hidden");
+    cartNav.classList.add("hidden");
+    navGreet.classList.add("hidden");
+  }
+}
+
+updateNav();

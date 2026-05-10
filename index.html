@@ -43,15 +43,34 @@
             clip-rule="evenodd"
           />
         </svg>
-        <button
+        <a
+          href="login.html"
+          id="loginNav"
           class="text-xs sm:text-sm font-bold border border-cream/30 text-cream rounded-md px-5 py-2 hover:cursor-pointer hover:border-crimson hover:bg-crimson/10 hover:-translate-y-0.5 transition-all"
         >
           Login
-        </button>
-        <button
+        </a>
+        <a
+          href="signup.html"
+          id="signupNav"
           class="text-xs sm:text-sm font-bold bg-crimson text-white rounded-md px-5 py-2 hover:cursor-pointer hover:bg-crimson-light hover:-translate-y-0.5 transition-all"
         >
           Sign Up
+        </a>
+        <div id="greetingNav" class="hidden text-cream text-sm font-medium">
+          Hello, Rida Khan
+        </div>
+        <button
+          id="cartNav"
+          class="hidden text-sm font-bold border bg-choco/1 border-cream/30 text-cream rounded-md px-3 py-2 hover:cursor-pointer hover:border-crimson hover:bg-crimson/10 hover:-translate-y-0.5 transition-all"
+        >
+          🛒
+        </button>
+        <button
+          id="logoutNav"
+          class="hidden text-xs sm:text-sm font-bold border border-cream/30 text-cream rounded-md px-5 py-2 hover:cursor-pointer hover:border-crimson hover:bg-crimson/10 hover:-translate-y-0.5 transition-all"
+        >
+          Logout
         </button>
       </div>
     </nav>
@@ -115,6 +134,34 @@
       </section>
     </main>
 
+    <!-- Cart Overlay & Panel -->
+    <div id="cartOverlay" class="fixed inset-0 z-60 bg-black/50 hidden"></div>
+
+    <div
+      id="cartPanel"
+      class="fixed right-0 top-0 h-full w-80 z-70 transition-transform duration-300 bg-cream-mid"
+    >
+      <div>
+        <div>Your Cart 🛒</div>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <footer class="bg-footer py-10">
       <div
         class="max-w-4xl mx-auto flex flex-col items-center gap-2 text-center"
@@ -139,5 +186,6 @@
 
     <script src="js/products.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
   </body>
 </html>
