@@ -223,14 +223,16 @@
     ></div>
     <div
       id="checkoutModal"
-      class="fixed inset-0 z-60 flex items-center justify-center px-4 hidden"
+      class="fixed inset-0 z-60 flex items-center justify-center px-6 border hidden"
     >
       <div
-        class="p-4 max-w-lg w-full border flex flex-col gap-6 bg-cream rounded-2xl overflow-y-auto max-h-[90vh]"
+        class="p-8 max-w-lg w-full border flex flex-col gap-6 bg-cream rounded-2xl overflow-y-auto max-h-[90vh]"
       >
         <div>
           <div class="flex justify-between">
-            <div class="text-2xl font-medium text-choco">Checkout</div>
+            <div class="text-3xl font-extrabold text-choco font-display">
+              Checkout
+            </div>
             <div>
               <button class="border p-1 rounded-md" id="closeCheckout">
                 <svg
@@ -312,6 +314,71 @@
             class="text-md font-bold bg-crimson text-white rounded-md px-5 py-3 hover:cursor-pointer hover:bg-crimson-light hover:-translate-y-0.5 transition-all w-full"
           >
             Place Order
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div
+      id="receiptOverlay"
+      class="fixed inset-0 z-60 bg-black/50 hidden"
+    ></div>
+    <div
+      id="receiptModal"
+      class="fixed inset-0 z-60 flex items-center justify-center px-4 hidden"
+    >
+      <div
+        class="py-12 px-10 max-w-md w-full border border-crimson-light flex flex-col gap-6 bg-cream rounded-2xl overflow-y-auto max-h-[90vh]"
+      >
+        <div class="flex flex-col items-center gap-2">
+          <div class="text-7xl">🎉</div>
+          <div class="flex flex-col items-center">
+            <div class="font-display text-3xl font-bold text-crimson">
+              Order Placed!
+            </div>
+            <div class="text-xs text-brown font-medium">
+              Your order is being prepared with love.
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-cream-mid p-4 text-xs font-medium flex flex-col gap-4 rounded-lg"
+          id="receiptSummary"
+        >
+          <div class="text-choco flex justify-between">
+            <div>Berry Bliss Sundae x 4</div>
+            <div>PKR 1680</div>
+          </div>
+          <div class="text-crimson flex justify-between">
+            <div>Total</div>
+            <div>PKR 1680</div>
+          </div>
+          <div class="text-brown text-xs flex flex-col gap-2">
+            <div class="flex justify-between">
+              <div>Name</div>
+              <div>Rida Khan</div>
+            </div>
+            <div class="flex justify-between">
+              <div>Phone</div>
+              <div>03126960085</div>
+            </div>
+            <div class="flex justify-between">
+              <div>Payment</div>
+              <div>Cash on Delivery</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs text-brown text-center">Order ID: SO-696458</div>
+        </div>
+
+        <div class="text-sm text-center">
+          <button
+            id="continueBtn"
+            class="text-md font-bold bg-crimson text-white rounded-md px-5 py-3 hover:cursor-pointer hover:bg-crimson-light hover:-translate-y-0.5 transition-all w-full"
+          >
+            Continue Shopping
           </button>
         </div>
       </div>
