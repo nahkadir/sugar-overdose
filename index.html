@@ -260,6 +260,10 @@
           class="bg-cream-mid p-4 text-xs font-medium flex flex-col gap-4 rounded-lg"
           id="orderSummary"
         ></div>
+        <div
+          class="hidden text-sm bg-crimson-light text-white py-2 px-4 rounded-lg w-full border border-border"
+          id="errorMsg"
+        ></div>
         <div>
           <div class="text-sm text-brown font-bold">FULL NAME</div>
           <div>
@@ -300,9 +304,9 @@
               name=""
               id="checkoutPayment"
             >
-              <option value="cash">Cash on Delivery</option>
-              <option value="easypaisa">EasyPaisa</option>
-              <option value="nayapay">NayaPay</option>
+              <option value="Cash">Cash on Delivery</option>
+              <option value="Easypaisa">EasyPaisa</option>
+              <option value="Nayapay">NayaPay</option>
               <option value="Credit Card">Credit Card</option>
             </select>
           </div>
@@ -345,32 +349,9 @@
         <div
           class="bg-cream-mid p-4 text-xs font-medium flex flex-col gap-4 rounded-lg"
           id="receiptSummary"
-        >
-          <div class="text-choco flex justify-between">
-            <div>Berry Bliss Sundae x 4</div>
-            <div>PKR 1680</div>
-          </div>
-          <div class="text-crimson flex justify-between">
-            <div>Total</div>
-            <div>PKR 1680</div>
-          </div>
-          <div class="text-brown text-xs flex flex-col gap-2">
-            <div class="flex justify-between">
-              <div>Name</div>
-              <div>Rida Khan</div>
-            </div>
-            <div class="flex justify-between">
-              <div>Phone</div>
-              <div>03126960085</div>
-            </div>
-            <div class="flex justify-between">
-              <div>Payment</div>
-              <div>Cash on Delivery</div>
-            </div>
-          </div>
-        </div>
+        ></div>
         <div>
-          <div class="text-xs text-brown text-center">Order ID: SO-696458</div>
+          <div id="orderID" class="text-xs text-brown text-center"></div>
         </div>
 
         <div class="text-sm text-center">

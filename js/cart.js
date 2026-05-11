@@ -116,6 +116,8 @@ function toggleCart() {
   cartPanel.classList.toggle("translate-x-full");
   cartPanel.classList.toggle("translate-x-0");
   cartOverlay.classList.toggle("hidden");
+
+  renderCart();
 }
 
 document.getElementById("cartNav").addEventListener("click", toggleCart);
@@ -161,3 +163,69 @@ document.getElementById("checkout").addEventListener("click", openCheckout);
 document
   .getElementById("closeCheckout")
   .addEventListener("click", closeCheckout);
+
+function placeOrder() {
+  let name = document.getElementById("checkoutName").value;
+  let phone = document.getElementById("checkoutPhone").value;
+  let address = document.getElementById("checkoutAddress").value;
+  let payment = document.getElementById("checkoutPayment").value;
+  let errorMsg = document.getElementById("errorMsg");
+
+  if (name === "" || address === "") {
+    errorMsg.textContent = "Please fill in all required fields";
+    errorMsg.classList.remove("hidden");
+    return;
+  }
+
+  let orderID = "SO-" + Math.floor(Math.random() * 900000 + 100000);
+
+  let total = 0;
+  let html = "";
+
+  cart.forEach(function (item) {
+    let product = products.find(function (p) {
+      return p.id === item.productId;
+    });
+    total += product.price * item.qty;
+    html += `<div class="text-choco flex justify-between">
+            <div>${product.name} x ${item.qty}</div>
+            <div>PKR ${product.price * item.qty}</div>
+          </div>`;
+  });
+
+  html += `<div class="text-crimson flex justify-between">
+            <div>Total</div>
+            <div>PKR ${total}</div>
+          </div>
+          <div class="text-brown text-xs flex flex-col gap-2">
+            <div class="flex justify-between">
+              <div>Name</div>
+              <div>${name}</div>
+            </div>
+            <div class="flex justify-between">
+              <div>Phone</div>
+              <div>${phone}</div>
+            </div>
+            <div class="flex justify-between">
+              <div>Payment</div>
+              <div>${payment}</div>
+            </div>
+          </div>
+  `;
+
+  document.getElementById("receiptSummary").innerHTML = html;
+  document.getElementById("orderID").textContent = "Order ID: " + orderID;
+
+  closeCheckout();
+  document.getElementById("receiptOverlay").classList.remove("hidden");
+  document.getElementById("receiptModal").classList.remove("hidden");
+
+  cart = [];
+  renderCart();
+}
+
+document.getElementById("placeOrderBtn").addEventListener("click", placeOrder);
+document.getElementById("continueBtn").addEventListener("click", function () {
+  document.getElementById("receiptOverlay").classList.add("hidden");
+  document.getElementById("receiptModal").classList.add("hidden");
+});
