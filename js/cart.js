@@ -121,3 +121,43 @@ function toggleCart() {
 document.getElementById("cartNav").addEventListener("click", toggleCart);
 document.getElementById("cartOverlay").addEventListener("click", toggleCart);
 document.getElementById("closeCart").addEventListener("click", toggleCart);
+
+function openCheckout() {
+  toggleCart();
+
+  let summary = document.getElementById("orderSummary");
+  let total = 0;
+  let html = `<div class="text-brown tracking-tight">ORDER SUMMARY</div>`;
+
+  cart.forEach(function (item) {
+    let product = products.find(function (p) {
+      return p.id === item.productId;
+    });
+
+    total += product.price * item.qty;
+    html += `<div class="flex justify-between text-choco">
+            <div>${product.name} x ${item.qty}</div>
+            <div>${product.price * item.qty}</div>
+          </div>`;
+  });
+
+  html += ` <div class="flex justify-between text-crimson">
+            <div>TOTAL</div>
+            <div>PKR ${total}</div>
+          </div>`;
+
+  summary.innerHTML = html;
+
+  document.getElementById("checkoutOverlay").classList.remove("hidden");
+  document.getElementById("checkoutModal").classList.remove("hidden");
+}
+
+function closeCheckout() {
+  document.getElementById("checkoutOverlay").classList.add("hidden");
+  document.getElementById("checkoutModal").classList.add("hidden");
+}
+
+document.getElementById("checkout").addEventListener("click", openCheckout);
+document
+  .getElementById("closeCheckout")
+  .addEventListener("click", closeCheckout);
