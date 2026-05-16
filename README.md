@@ -56,16 +56,16 @@ cd sugar-overdose
 
 **2. Install Tailwind CSS**
 ```bash
-npm install
+npm install tailwindcss @tailwindcss/cli
 ```
 
-**3. Start the Tailwind watcher**
+**3. Start the Tailwind CLI build process**
 ```bash
 npx tailwindcss -i ./css/input.css -o ./css/output.css --watch
 ```
 
 **4. Open with Live Server**
-Right-click `index.html` in VS Code → **Open with Live Server**
+Right-click `index.html` in VS Code & **Open with Live Server**
 
 ## Testing the Features
 
@@ -77,10 +77,9 @@ Right-click `index.html` in VS Code → **Open with Live Server**
 4. After login — click `+` on any product to add to cart
 5. Open cart via the 🛒 button in navbar
 6. Adjust quantities with `+` / `−` buttons
-7. Click **Process to Checkout**
+7. Click **Proceed to Checkout**
 8. Fill in delivery details → click **Place Order**
 9. Receipt appears with Order ID
-10. Click ☆ on any product to leave a star rating
 
 ### Resetting Data
 
@@ -92,7 +91,7 @@ To clear all users and sessions, open browser DevTools → **Application** → *
 - **Typography:** Playfair Display (headings) + DM Sans (body)
 - **Mobile first:** All layouts designed for mobile, scaled up to desktop using Tailwind breakpoints (`md:`, `lg:`, `xl:`)
 
-## 🔮 Planned Improvements
+## Planned Improvements
 
 - Admin dashboard — full CRUD interface for products with stock toggle (add, edit, delete, mark in/out of stock)
 - Star ratings — customers can rate purchased products 1–5 stars, average displayed on each product card
